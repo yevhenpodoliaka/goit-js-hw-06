@@ -3,8 +3,10 @@ const minInputLength = inputEl.dataset.length;
 
 inputEl.addEventListener("blur", onInputBlur);
 
+
+
 function onInputBlur(event) {
   if (event.currentTarget.value.length < minInputLength) {
     inputEl.classList.add("invalid");
-  } else inputEl.classList.add("valid");
+  } else inputEl.classList.remove("invalid"), inputEl.classList.add("valid");
 }
